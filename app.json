@@ -1,0 +1,14 @@
+{
+    "pages": [
+       "pages/home/heme"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "颜值大师",
+        "navigationBarTextStyle": "white",
+        "navigationStyle":"custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

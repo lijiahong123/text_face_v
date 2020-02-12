@@ -1,0 +1,29 @@
+<!--pages/home/heme.wxml-->
+<camera style="height:{{windowHeight}}px; width:100%" flash="off" device-position="{{isfront ? 'back' : 'front'}}" wx:if="{{!src}}">
+    <cover-view class="btn-box">
+        <!-- 翻转摄像头 -->
+        <cover-image src="/assecs/icons/reverse.png" bind:tap="reversecamera"></cover-image>
+        <!-- 拍照 -->
+        <cover-image src="/assecs/icons/camera.png" bind:tap="takePhoto"></cover-image>
+        <!-- 相册选择 -->
+        <cover-image src="/assecs/icons/album.png" bind:tap="chooseImage"></cover-image>
+    </cover-view>
+</camera>
+<view wx:else style="width100%; height:{{windowHeight}}px;">
+    <image src="{{src}}" style="width:100%; height: 100%;display:block;" mode="aspectFill"></image>
+    <button class="choose-btn" bind:tap="rechoosepic">重新选择图片</button>
+    <view class="face-box-position" wx:if="{{face}}">
+        <view>
+            <text>年龄: {{face.age}}</text>
+            <text>颜值: {{face.beauty}}</text>
+        </view>
+        <view>
+            <text>表情: {{face.expression}}</text>
+            <text>性别: {{face.gender}}</text>
+        </view>
+        <view>
+            <text>眼镜: {{face.glasses}}</text>
+            <text>情绪: {{face.emotion}}</text>
+        </view>
+    </view>
+</view>
